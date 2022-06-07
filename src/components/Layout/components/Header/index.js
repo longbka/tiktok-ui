@@ -1,7 +1,13 @@
-function Header({ children }) {
+import styles from './Header.module.scss';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
+function Header() {
   return (
-    <div>
-      <h2>Header</h2>
+    <div className={cx('wrapper')}>
+      <div className={cx('inner')}>
+        {/*Logo */}
+        {/*Search*/}
+      </div>
     </div>
   );
 }
