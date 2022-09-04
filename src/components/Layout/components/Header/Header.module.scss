@@ -1,12 +1,45 @@
 .wrapper {
   width: 100%;
-  height: 60px;
+  height: var(--default-layout-header-height);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
   display: flex;
   justify-content: center;
-}
-.inner {
-  height: 100%;
-  width: 1150px;
-  background-color: #ccc;
+  .inner {
+    padding: 24px;
+    height: 100%;
+    width: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+    }
+    //Action
+    .action {
+      display: flex;
+      align-items: center;
+      button {
+        background-color: transparent;
+      }
+      .action-btn {
+        cursor: pointer;
+        padding: 4px 12px;
+        color: #161823;
+        font-size: 2rem;
+      }
+      .user-avatar {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-left: 12px;
+      }
+      .more-btn {
+        font-size: 2.4rem;
+        margin-left: 28px;
+        background-color: transparent;
+        padding: 8px;
+      }
+    }
+  }
 }
