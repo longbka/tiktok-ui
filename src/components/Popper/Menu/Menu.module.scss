@@ -10,7 +10,9 @@
 .menu-popper {
   padding-bottom: 8px;
 }
-
+.menu-body {
+  overflow-y: auto;
+}
 // Menu items
 .menu-item {
   width: 100%;
@@ -18,8 +20,12 @@
   border-radius: 0;
   padding: 11px 16px;
   line-height: 1.8rem;
+  .separate {
+    border-top: 1px solid rgba(22, 24, 35, 0.12);
+  }
+
   &:hover {
-    background-color: rgba(22, 24, 35, 0.03);
+    background-color: rgba(22, 24, 35, 0.03) !important;
   }
 }
 //Header
@@ -27,6 +33,7 @@
   margin-top: -8px;
   position: relative;
   height: 50px;
+  flex-shrink: 0;
 }
 .back-btn {
   width: 50px;
@@ -39,7 +46,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.separate {
-  border-top: 1px solid rgba(22, 24, 35, 0.12);
 }

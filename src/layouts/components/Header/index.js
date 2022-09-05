@@ -24,6 +24,7 @@ import Menu from '~/components/Popper/Menu';
 import { MessageIcon, InboxIcon } from '~/components/Icons';
 import { Image } from '~/components/Image';
 import { Search } from '../Search';
+import config from '~/config';
 const cx = classNames.bind(styles);
 const handleMenuChange = (menuItem) => {
   console.log(menuItem);
@@ -87,13 +88,11 @@ function Header() {
     },
   ];
   return (
-    <div className={cx('wrapper')}>
+    <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <div className={cx('logo')}>
-          <Link to="/">
-            <img src={images.logo} alt="Tiktok"></img>
-          </Link>
-        </div>
+        <Link to={config.routes.home} className={cx('logo-link')}>
+          <img src={images.logo} alt="Tiktok"></img>
+        </Link>
         {/* Search */}
         <Search />
         {/*Action Block   */}
@@ -114,6 +113,7 @@ function Header() {
               <Tippy delay={[0, 200]} content="Inbox">
                 <button className={cx('action-btn')}>
                   <InboxIcon />
+                  <span className={cx('badge')}>12</span>
                 </button>
               </Tippy>
             </>
@@ -141,7 +141,7 @@ function Header() {
           </Menu>
         </div>
       </div>
-    </div>
+    </header>
   );
 }
 
